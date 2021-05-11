@@ -24,11 +24,11 @@ public class Anuncio implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 	private Instant dataInicio;
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 	private Instant dataTermino;
-	private Float InvestimentoDia;
+	private Float investimentoDia;
 
 	@JsonIgnore
 	@ManyToOne
@@ -45,7 +45,7 @@ public class Anuncio implements Serializable{
 		this.nome = nome;
 		this.dataInicio = dataInicio;
 		this.dataTermino = dataTermino;
-		InvestimentoDia = investimentoDia;
+		this.investimentoDia = investimentoDia;
 		this.cliente = cliente;
 	}
 
@@ -82,11 +82,11 @@ public class Anuncio implements Serializable{
 	}
 
 	public Float getInvestimentoDia() {
-		return InvestimentoDia;
+		return investimentoDia;
 	}
 
 	public void setInvestimentoDia(Float investimentoDia) {
-		InvestimentoDia = investimentoDia;
+		this.investimentoDia = investimentoDia;
 	}
 
 	public Cliente getCliente() {

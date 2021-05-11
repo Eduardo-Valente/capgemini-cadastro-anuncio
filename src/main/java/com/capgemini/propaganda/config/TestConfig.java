@@ -29,12 +29,12 @@ public class TestConfig implements CommandLineRunner{
 		Cliente cli1 = new Cliente(null, "Maria Brown", "maria@gmail.com", "988888888");
 		Cliente cli2 = new Cliente(null, "Alex Green", "alex@gmail.com", "977777777");
 		
-		Anuncio anu1 = new Anuncio(null, "Dog Show", Instant.parse("2019-06-18T19:53:07Z"), 
-								Instant.parse("2019-06-20T19:53:07Z"), 28f, cli1);
-		Anuncio anu2 = new Anuncio(null, "Neo Pharma", Instant.parse("2019-06-15T19:53:07Z"), 
-								Instant.parse("2019-07-21T03:42:10Z"), 42f, cli2);
-		Anuncio anu3 = new Anuncio(null, "Invisible Ink", Instant.parse("2019-06-10T19:53:07Z"), 
-								Instant.parse("2019-07-22T15:21:22Z"), 35f, cli1);
+		Anuncio anu1 = new Anuncio(null, "Tintas Ad Infinitum", Instant.parse("18/05/2019"), 
+								Instant.parse("20/06/2019"), 28f, cli1);
+		Anuncio anu2 = new Anuncio(null, "Neo Pharma", Instant.parse("15/02/2019"), 
+								Instant.parse("21/07/2019"), 42f, cli2);
+		Anuncio anu3 = new Anuncio(null, "Toalhas Emporium", Instant.parse("27/04/2019"), 
+								Instant.parse("07/11/2019"), 35f, cli1);
 
 		clienteRepositorio.saveAll(Arrays.asList(cli1, cli2));
 		anuncioRepositorio.saveAll(Arrays.asList(anu1, anu2, anu3));
